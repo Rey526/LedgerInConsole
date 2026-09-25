@@ -43,7 +43,7 @@ public class Main {
         boolean running = true;
 
         while (running) {
-            // TODO: print the menu options
+          
             System.out.println("1. Add Expense");
             System.out.println("2. Add Income");
             System.out.println("3. List All Transactions");
@@ -53,16 +53,16 @@ public class Main {
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // TODO: figure out why this line is needed (hint: nextInt() vs nextLine())
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
-                    // TODO: prompt for amount, description, category, date
+               
                     Expense expense = promptForExpense(scanner);
                     tracker.add(expense);
                     break;
                 case 2:
-                    // TODO: same as above but create an Income
+                   
                     Income income = promptForIncome(scanner);
                     tracker.add(income);
                     break;
@@ -70,11 +70,11 @@ public class Main {
                     tracker.listAll();
                     break;
                 case 4:
-                    // TODO: print tracker.getMonthlyTotal()
+                   
                     System.out.println(tracker.getMonthlyTotal());
                     break;
                 case 5:
-                    // TODO: prompt for a category string, print tracker.getTotalByCategory(category)
+                   
                     System.out.print("Enter Category: ");
                     String byCategory = scanner.nextLine();
                     System.out.println(tracker.getTotalByCategory(byCategory));
